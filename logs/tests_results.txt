@@ -1,7 +1,7 @@
 test_absolute (__main__.TestExercice) ... ok
 test_factorial (__main__.TestExercice) ... FAIL
 test_prefixes (__main__.TestExercice) ... ok
-test_summation (__main__.TestExercice) ... FAIL
+test_summation (__main__.TestExercice) ... ok
 test_verify_ages (__main__.TestExercice) ... FAIL
 
 ======================================================================
@@ -10,22 +10,14 @@ FAIL: test_factorial (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 62, in test_factorial
     'Mauvaise réponse'
-AssertionError: Lists differ: [0, 0, 0, 0] != [1, 6, 40320, 3628800]
+AssertionError: Lists differ: [1, 3, 0, 0] != [1, 6, 40320, 3628800]
 
-First differing element 0:
-0
-1
+First differing element 1:
+3
+6
 
-- [0, 0, 0, 0]
+- [1, 3, 0, 0]
 + [1, 6, 40320, 3628800] : Mauvaise réponse
-
-======================================================================
-FAIL: test_summation (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 50, in test_summation
-    'Mauvaise réponse'
-AssertionError: 0 != 24133 : Mauvaise réponse
 
 ======================================================================
 FAIL: test_verify_ages (__main__.TestExercice)
@@ -43,6 +35,6 @@ False
 + [False, True, False, False, True, True, True, True, False] : Mauvaise réponse
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.002s
 
-FAILED (failures=3)
+FAILED (failures=2)
