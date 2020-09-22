@@ -39,13 +39,16 @@ def prime_integer_summation() -> int:
 
 
 def factorial(number: int) -> int:
-    if is_prime_number(number):
-        return number
-    return 0
+    factorial_value = 1
+    for i in range(2, number+1):
+        factorial_value *= i
+
+    return factorial_value
 
 
 def use_continue() -> None:
-    pass
+    for i in range(0, 10):
+        
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
