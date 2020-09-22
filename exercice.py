@@ -40,19 +40,37 @@ def prime_integer_summation() -> int:
 
 def factorial(number: int) -> int:
     factorial_value = 1
-    for i in range(2, number):
+    for i in range(2, number + 1):
         factorial_value *= i
 
     return factorial_value
 
 
 def use_continue() -> None:
-    pass
+    for i in range(1,11):
+        if i == 5:
+            continue
+        print(i, end = " ")
+    print("")
 
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
-    return []
+    acceptance = []
+    for sub_group in groups:
+        if len(sub_group) > 10 or len(sub_group) <= 3:
+            acceptance.append(False)
+            continue
+        if 25 in sub_group:
+            acceptance.append(True)
+            continue
+        if (min(sub_group) < 18) or (50 in sub_group and max(sub_group) > 70):
+            acceptance.append(False)
+            continue
+
+        acceptance.append(True)
+
+    return acceptance
 
 
 def main() -> None:
