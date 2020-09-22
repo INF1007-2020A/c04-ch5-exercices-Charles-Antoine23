@@ -20,12 +20,27 @@ def use_prefixes() -> List[str]:
 
     return noms
 
+def is_prime_number(number: int) -> bool:
+    for i in range(2, number//2):
+        if number % i == 0:
+            return False
+
+    return True
 
 def prime_integer_summation() -> int:
-    return 0
+    prime = [2, 3, 5]
+
+    number = 6
+    while len(prime) < 100:
+        if is_prime_number(number):
+            prime.append(number)
+        number += 1
+    return sum(prime)
 
 
 def factorial(number: int) -> int:
+    if is_prime_number(number):
+        return number
     return 0
 
 
