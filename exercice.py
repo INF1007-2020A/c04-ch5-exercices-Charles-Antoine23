@@ -40,15 +40,15 @@ def prime_integer_summation() -> int:
 
 def factorial(number: int) -> int:
     factorial_value = 1
-    for i in range(2, number+1):
+    for i in range(2, number):
         factorial_value *= i
 
     return factorial_value
 
 
 def use_continue() -> None:
-    for i in range(0, 10):
-        
+    pass
+
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
